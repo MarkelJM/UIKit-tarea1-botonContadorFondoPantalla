@@ -8,5 +8,6 @@
 import UIKit
 
 class AppModel {
-    var number: Int = 0
+    var number: Double = 0.0
 }
+

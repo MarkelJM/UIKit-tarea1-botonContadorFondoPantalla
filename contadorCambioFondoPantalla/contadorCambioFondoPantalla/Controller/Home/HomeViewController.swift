@@ -11,19 +11,19 @@ import Combine
 
 class HomeViewController: UIViewController {
     var appModel = AppModel()
-    @Published var currentNumber: Int = 0
+    @Published var currentNumber: Double = 0.0
     var appView: HomeView! { return self.view as? HomeView }
     private var cancellables: Set<AnyCancellable> = []
 
-    private let backgroundColors: [UIColor] = [.red, .green, .blue, .yellow, .orange, .purple]
-
+    private let backgroundColors: [UIColor] = [.red, .green, .blue, .yellow, .orange, .purple, .cyan, .magenta, .brown]
+    
     override func loadView() {
         self.view = HomeView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        appView.incrementButton.addTarget(self, action: #selector(incrementButtonTapped), for: .touchUpInside)
+        appView.incrementButton.addTarget(self, action: #selector(incrementButtonTapped), for: .touchUpInside) //#selector es una manera de referenciar un método que se llamará en respuesta a un evento
 
         $currentNumber
             .sink { [weak self] number in
@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
             }
             .store(in: &cancellables)
     }
-
+    /*
     @objc private func incrementButtonTapped() {
         let alertController = UIAlertController(title: "Increment", message: "Enter a number", preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -47,6 +47,30 @@ class HomeViewController: UIViewController {
         alertController.addAction(confirmAction)
         present(alertController, animated: true)
     }
+     */
+    @objc private func incrementButtonTapped() {
+        let alertController = UIAlertController(title: "Increment", message: "Enter a number", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.keyboardType = .decimalPad  // Cambiado a decimalPad para permitir decimales
+        }
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            if let text = alertController.textFields?.first?.text, let value = Double(text) {
+                // Convertir y sumar como Double, luego convertir a Int para currentNumber
+                self?.appModel.number += Double(value)
+                self?.currentNumber = self?.appModel.number ?? 0
+
+
+            } else {
+                print("Error with chosen number, try agai")
+                let errorAlert = UIAlertController(title: "Error", message: "Invalid number entered. Please enter a valid number.", preferredStyle: .alert)
+                errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(errorAlert, animated: true)
+            }
+        }
+        alertController.addAction(confirmAction)
+        present(alertController, animated: true)
+    }
+
 }
 
 
