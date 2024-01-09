@@ -14,7 +14,8 @@
 		C5A685AF2B4D639000AE0DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A685AE2B4D639000AE0DFA /* Assets.xcassets */; };
 		C5A685B22B4D639000AE0DFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A685B02B4D639000AE0DFA /* LaunchScreen.storyboard */; };
 		C5A685BC2B4D647000AE0DFA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A685BA2B4D647000AE0DFA /* HomeViewController.swift */; };
-		C5A685BD2B4D647000AE0DFA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A685BB2B4D647000AE0DFA /* HomeViewController.xib */; };
+		C5A685C32B4D6E0300AE0DFA /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A685C22B4D6E0300AE0DFA /* AppModel.swift */; };
+		C5A685C52B4D6EA200AE0DFA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A685C42B4D6EA200AE0DFA /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		C5A685B12B4D639000AE0DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A685B32B4D639000AE0DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A685BA2B4D647000AE0DFA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C5A685BB2B4D647000AE0DFA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C5A685C22B4D6E0300AE0DFA /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		C5A685C42B4D6EA200AE0DFA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,9 @@
 		C5A685A42B4D638D00AE0DFA /* contadorCambioFondoPantalla */ = {
 			isa = PBXGroup;
 			children = (
-				C5A685B92B4D643C00AE0DFA /* Home */,
+				C5A685C02B4D6DE300AE0DFA /* Model */,
+				C5A685BF2B4D6DDD00AE0DFA /* Controller */,
+				C5A685BE2B4D6DD600AE0DFA /* View */,
 				C5A685A52B4D638D00AE0DFA /* AppDelegate.swift */,
 				C5A685A72B4D638D00AE0DFA /* SceneDelegate.swift */,
 				C5A685A92B4D638D00AE0DFA /* ViewController.swift */,
@@ -75,8 +79,39 @@
 		C5A685B92B4D643C00AE0DFA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C5A685C42B4D6EA200AE0DFA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C5A685BE2B4D6DD600AE0DFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5A685B92B4D643C00AE0DFA /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5A685BF2B4D6DDD00AE0DFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5A685C12B4D6DED00AE0DFA /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C5A685C02B4D6DE300AE0DFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5A685C22B4D6E0300AE0DFA /* AppModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5A685C12B4D6DED00AE0DFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				C5A685BA2B4D647000AE0DFA /* HomeViewController.swift */,
-				C5A685BB2B4D647000AE0DFA /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -142,7 +177,6 @@
 				C5A685B22B4D639000AE0DFA /* LaunchScreen.storyboard in Resources */,
 				C5A685AF2B4D639000AE0DFA /* Assets.xcassets in Resources */,
 				C5A685AD2B4D638D00AE0DFA /* Main.storyboard in Resources */,
-				C5A685BD2B4D647000AE0DFA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +190,8 @@
 				C5A685AA2B4D638D00AE0DFA /* ViewController.swift in Sources */,
 				C5A685A62B4D638D00AE0DFA /* AppDelegate.swift in Sources */,
 				C5A685A82B4D638D00AE0DFA /* SceneDelegate.swift in Sources */,
+				C5A685C52B4D6EA200AE0DFA /* HomeView.swift in Sources */,
+				C5A685C32B4D6E0300AE0DFA /* AppModel.swift in Sources */,
 				C5A685BC2B4D647000AE0DFA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
