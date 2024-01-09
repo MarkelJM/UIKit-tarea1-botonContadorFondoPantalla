@@ -13,6 +13,8 @@
 		C5A685AD2B4D638D00AE0DFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A685AB2B4D638D00AE0DFA /* Main.storyboard */; };
 		C5A685AF2B4D639000AE0DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A685AE2B4D639000AE0DFA /* Assets.xcassets */; };
 		C5A685B22B4D639000AE0DFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A685B02B4D639000AE0DFA /* LaunchScreen.storyboard */; };
+		C5A685BC2B4D647000AE0DFA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A685BA2B4D647000AE0DFA /* HomeViewController.swift */; };
+		C5A685BD2B4D647000AE0DFA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A685BB2B4D647000AE0DFA /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C5A685AE2B4D639000AE0DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A685B12B4D639000AE0DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A685B32B4D639000AE0DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A685BA2B4D647000AE0DFA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C5A685BB2B4D647000AE0DFA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		C5A685A42B4D638D00AE0DFA /* contadorCambioFondoPantalla */ = {
 			isa = PBXGroup;
 			children = (
+				C5A685B92B4D643C00AE0DFA /* Home */,
 				C5A685A52B4D638D00AE0DFA /* AppDelegate.swift */,
 				C5A685A72B4D638D00AE0DFA /* SceneDelegate.swift */,
 				C5A685A92B4D638D00AE0DFA /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				C5A685B32B4D639000AE0DFA /* Info.plist */,
 			);
 			path = contadorCambioFondoPantalla;
+			sourceTree = "<group>";
+		};
+		C5A685B92B4D643C00AE0DFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C5A685BA2B4D647000AE0DFA /* HomeViewController.swift */,
+				C5A685BB2B4D647000AE0DFA /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +142,7 @@
 				C5A685B22B4D639000AE0DFA /* LaunchScreen.storyboard in Resources */,
 				C5A685AF2B4D639000AE0DFA /* Assets.xcassets in Resources */,
 				C5A685AD2B4D638D00AE0DFA /* Main.storyboard in Resources */,
+				C5A685BD2B4D647000AE0DFA /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 				C5A685AA2B4D638D00AE0DFA /* ViewController.swift in Sources */,
 				C5A685A62B4D638D00AE0DFA /* AppDelegate.swift in Sources */,
 				C5A685A82B4D638D00AE0DFA /* SceneDelegate.swift in Sources */,
+				C5A685BC2B4D647000AE0DFA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
